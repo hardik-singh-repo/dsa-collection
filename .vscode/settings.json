@@ -1,0 +1,8 @@
+{
+    "cSpell.words": [
+        "occurance"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ]
+}
