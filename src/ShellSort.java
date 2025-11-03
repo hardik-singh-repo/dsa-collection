@@ -1,39 +1,36 @@
 
 import java.util.Arrays;
 
+/**
+ * This algorithm was discovered by Donald Shell in 1959. It uses a h-sorting technique, where h is an
+ * optimal gap between the elements being compared.
+ */
 public class ShellSort {
-    
+
     public static void sort(int[] arr) {
-        int n = arr.length;
-        
-        // Start with a big gap, then reduce the gap
-        for (int gap = n/2; gap > 0; gap /= 2) {
-            // Do a gapped insertion sort for this gap size.
-            // Elements [0..gap-1], [gap..2*gap-1], [2*gap..3*gap-1]...
-            // are sorted independently
-            for (int i = gap; i < n; i++) {
-                // add arr[i] to the elements that have been gap sorted
-                // save arr[i] in temp and make a hole at position i
-                int temp = arr[i];
-                int j;
+        int N = arr.length;
+        int h = 1;
 
-                // shift earlier gap-sorted elements up until the correct
-                // location for arr[i] is found
-                for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) {
-                    arr[j] = arr[j - gap];
+        // find optimal h for this arr length.
+        while (h < N / 3)
+            h = 3 * h + 1;
+
+        while(h >=1) {
+            for (int i = h; i < N; i++) {
+                for (int j = i; j >= h && arr[j] < arr[j - h]; j -= h) {
+                        int temp = arr[j];
+                        arr[j] = arr[j - h];
+                        arr[j - h] = temp;
                 }
-
-                // put temp (the original arr[i]) in its correct location
-                arr[j] = temp;
             }
+            h = h/3;
         }
     }
 
     public static void main(String[] args) {
-        int[] arr = {12, 34, 54, 3, 54, 33, 22};
+        int[] arr = { 83, 17, 42, 6, 58, 91, 24, 73, 0, 37, 65, 12, 49, 88, 30, 5, 76, 21, 54, 69 };
         System.out.println("Original array: " + Arrays.toString(arr));
         sort(arr);
         System.out.println("Sorted array: " + Arrays.toString(arr));
     }
-    
 }
