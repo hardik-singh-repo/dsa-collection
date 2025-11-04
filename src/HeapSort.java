@@ -1,50 +1,67 @@
-
 import java.util.Arrays;
 
-public class HeapSort{
+public class HeapSort<Key extends Comparable<Key>>{
+    private Key[] heap;
+    private int N;
+    public HeapSort(Key[] keys) {
+        this.heap = keys;
+        this.N = keys.length - 1;
+    }
 
-    public static void sort(int[] arr){
-
-        int n = arr.length;
-        for(int i = n / 2 - 1; i >=0; i--){
-            heapify(arr, n, i);
+    public void sort(){
+        // step 1: create the heap.
+        for(int i = N; i >= 0; i--) {
+            swim(i);
         }
-       
-        for(int i = n - 1; i > 0; i--){
-            int temp = arr[0];
-            arr[0] = arr[i];
-            arr[i] = temp;
 
-            heapify(arr, i, 0);
+        // step 2; sort the heap.
+        while(N > 0) {
+            swap(0, N--);
+            sink(0);
         }
     }
 
-    public static void heapify(int[] arr, int n, int i) {
-        int largest = i;
-        int left = 2 * i + 1;
-        int right = 2 * i + 2;
-
-        if(left < n && arr[left] > arr[largest]){
-            largest = left;
+    private void swim(int k) {
+        while(k > 0) {
+            int p = (k - 1) / 2;
+            if (less(p, k)) {
+                swap(p, k);
+            }
+            k = p;
         }
-        
-        if(right < n && arr[right] > arr[largest]){
-            largest = right;
+    }
+
+    private void sink(int k) {
+        while((2 * k + 1) <= N) {
+            int j = 2 * k + 1;
+            if (j < N && less(j, j + 1)){
+                j++;
+            }
+            if(!less(k, j)) break;
+            swap(k, j);
+            k = j;
         }
+    }
 
-        if(largest != i){
-            int temp = arr[i];
-            arr[i] = arr[largest];
-            arr[largest] = temp;
+    private boolean less(int i, int j) {
+        return heap[i].compareTo(heap[j]) < 0;
+    }
 
-            heapify(arr, n, largest);
-        } 
+    private void swap(int i, int j) {
+        Key temp = heap[i];
+        heap[i] = heap[j];
+        heap[j] = temp;
     }
 
     public static void main(String[] args){
-        int[] arr = {12, 22, 5, 67, 87, 91, 33};
-        sort(arr);
-        System.out.println(Arrays.toString(arr));        
-    }
+        String[] keys =  new String[]{ "A", "C", "R", "Y", "T", "W", "C"};
+        HeapSort<String> heap = new HeapSort<>(keys);
+        heap.sort();
+        System.out.println(Arrays.toString(keys));      
 
+        Integer[] arr = {30, 20, 50, 60,70, 10, 40, 90};
+        HeapSort<Integer> heap1 = new HeapSort<>(arr);
+        heap1.sort();
+        System.out.println(Arrays.toString(arr));
+    }
 }
