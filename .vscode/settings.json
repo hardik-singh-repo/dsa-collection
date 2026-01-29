@@ -4,5 +4,47 @@
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
-    ]
+    ],
+    "editor.quickSuggestions": {
+        "other": "off",
+        "comments": "off",
+        "strings": "off"
+    },
+    "workbench.colorCustomizations": { //disabled squiggle line, shows-up for error when you are typing the code.
+        "editorError.foreground":   "#00000000",
+        "editorWarning.foreground": "#00000000",
+        "editorInfo.foreground":    "#00000000"
+    },
+    //Disabled all sorts of auto-suggestions.
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.inlineSuggest.enabled": false,
+    "editor.hover.enabled": "off",
+    "editor.parameterHints.enabled": false,
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.autoSurround": "never",
+    "editor.suggest.showMethods": false,
+    "editor.suggest.showFunctions": false,
+    "editor.suggest.showConstants": false,
+    "editor.suggest.showKeywords": false,
+    "editor.suggest.showVariables": false,
+    "editor.suggest.showClasses": false,
+    "editor.suggest.showStructs": false,
+    "editor.suggest.showInterfaces": false,
+    "editor.suggest.showModules": false,
+    "editor.suggest.showProperties": false,
+    "editor.suggest.showFields": false,
+    "editor.suggest.showEnumMembers": false,
+    "editor.suggest.showEvents": false,
+    "editor.suggest.showOperators": false,
+    "editor.suggest.showUnits": false,
+    "editor.suggest.showValues": false,
+    "editor.suggest.showWords": false,
+    "editor.suggest.showColors": false,
+    "editor.suggest.showFiles": false,
+    "editor.suggest.showFolders": false,
+    "editor.suggest.showReferences": false,
+    "editor.suggest.showSnippets": false,
+    "editor.suggest.showText": false,
+    "java.debug.settings.onBuildFailureProceed": true
 }

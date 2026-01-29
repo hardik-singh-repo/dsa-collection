@@ -15,7 +15,7 @@ public class StackUsingResizingArray {
         array[n++] = item;
     }
 
-    //For dynamic resizing the array 1/2 the size when array items become 1/4 of total i   gth.
+    //For dynamic resizing the array 1/2 the size when array items become 1/4 of total length.
     public int pop() {
         if (array == null || n == 0) {
             throw new java.util.NoSuchElementException("Stack is empty");

@@ -1,3 +1,4 @@
+package sorting;
 import java.util.Arrays;
 /**
  * Works on array with duplicate entries. Performs better that traditional quick sort.

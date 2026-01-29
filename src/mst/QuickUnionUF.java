@@ -1,10 +1,11 @@
+package mst;
 
 public class QuickUnionUF {
     int[] arr; 
 
     public QuickUnionUF (int n) {
         arr = new int[n];
-        for(int i = 0; i < n-1; i++) {
+        for(int i = 0; i < n; i++) {
             arr[i] = i;
         }
     }

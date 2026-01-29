@@ -1,0 +1,99 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "LazyPrimMST",
+            "request": "launch",
+            "mainClass": "mst.LazyPrimMST",
+            "projectName": "dsa-collection_986748b5"
+        },
+        {
+            "type": "java",
+            "name": "KruskalsMST",
+            "request": "launch",
+            "mainClass": "mst.KruskalsMST",
+            "projectName": "dsa-collection_986748b5"
+        },
+        {
+            "type": "java",
+            "name": "KosarajuSharirScc",
+            "request": "launch",
+            "mainClass": "digraphs.KosarajuSharirScc",
+            "projectName": "dsa-collection_986748b5"
+        },
+        {
+            "type": "java",
+            "name": "TopologicalSort",
+            "request": "launch",
+            "mainClass": "digraphs.TopologicalSort",
+            "projectName": "dsa-collection_986748b5"
+        },
+        {
+            "type": "java",
+            "name": "DepthFirstSearch",
+            "request": "launch",
+            "mainClass": "digraphs.DepthFirstSearch",
+            "projectName": "dsa-collection_986748b5"
+        },
+        {
+            "type": "java",
+            "name": "ConnectedComponent",
+            "request": "launch",
+            "mainClass": "ConnectedComponent",
+            "projectName": "dsa-collection_986748b5"
+        },
+        {
+            "type": "java",
+            "name": "BreadthFirstSearch",
+            "request": "launch",
+            "mainClass": "BreadthFirstSearch",
+            "projectName": "dsa-collection_986748b5"
+        },
+        {
+            "type": "java",
+            "name": "DepthFirstSearch",
+            "request": "launch",
+            "mainClass": "DepthFirstSearch",
+            "projectName": "dsa-collection_986748b5"
+        },
+        {
+            "type": "java",
+            "name": "DepthFirstSearch",
+            "request": "launch",
+            "mainClass": "Graph.DepthFirstSearch",
+            "projectName": "dsa-collection_986748b5"
+        },
+        {
+            "type": "java",
+            "name": "LinearProbingHashMap",
+            "request": "launch",
+            "mainClass": "LinearProbingHashMap",
+            "projectName": "dsa-collection_986748b5"
+        },
+        {
+            "type": "java",
+            "name": "SeparateChainingHashMap",
+            "request": "launch",
+            "mainClass": "SeparateChainingHashMap",
+            "projectName": "dsa-collection_986748b5"
+        },
+        {
+            "type": "java",
+            "name": "BST",
+            "request": "launch",
+            "mainClass": "BST",
+            "projectName": "dsa-collection_986748b5"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "vmArgs": "-ea"
+        }
+    ]
+}
